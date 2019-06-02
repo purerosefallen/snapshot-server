@@ -1,2 +1,2 @@
 @echo off
-node index.js images
+node index.js 10000 images
