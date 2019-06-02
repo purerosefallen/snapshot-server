@@ -31,7 +31,7 @@ http.createServer((request, response) => {
 				response.end("Invalid file.");
 				return;
 			}
-			response.writeHead(200, { "Content-Type": "application/octet-stream", "Content-Disposition": "attachment" });
+			response.writeHead(200, { "Content-Type": process.argv[4] || "application/octet-stream" });
 			response.end(buffer);
 		});
 	});
